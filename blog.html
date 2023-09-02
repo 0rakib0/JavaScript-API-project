@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PHTube</title>
+        <script src="https://kit.fontawesome.com/b0da198e17.js"
+            crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css"
+            rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'primary-color': '#FF1F3D',
+              }
+            }
+          }
+        }
+      </script>
+    </head>
+    <body class="w-11/12 mx-auto my-4">
+        
+        <header class>
+            <nav class>
+                <div class="navbar bg-base-100">
+                    <div class="navbar-start">
+                        <div class="dropdown">
+                            <label tabindex="0" class="btn btn-ghost lg:hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-5 w-5" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor"><path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                            </label>
+                            <ul tabindex="0"
+                                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                                <li><a class="bg-gray-200 text-lg">Sort by view</a></li>
+                            </ul>
+                        </div>
+                        <a class="btn btn-ghost normal-case text-xl">
+                            <img src="Logo.png" alt>
+                        </a>
+                    </div>
+                    <div class="navbar-center hidden lg:flex">
+                        <ul class="menu menu-horizontal px-1">
+                            <li><a class="bg-gray-200 text-lg">Sort by view</a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar-end">
+                        <a href="index.html" class="btn bg-primary-color text-white hover:bg-red-400">Back Home</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="w-3/5 mx-auto my-6">
+                <h1 class="text-2xl font-bold">1. Discuss the scope of var, let, and const</h1>
+                <div class="bg-gray-200 p-4 mt-6 rounded-lg">
+                    <h2 class="text-xl font-bold border-bottom">Var...</h2>
+                    <p>Block Scope
+                        var’s are not block-scoped: scope is not limited to the block it was defined in.                        
+                        i was still in the “global scope” within the if block. i's value was overwritten, which may have not been the intention. Usually We are not use var proparlly We are Only Use let an const</p>
+                </div>
+                <div class="bg-gray-200 p-4 mt-6 rounded-lg">
+                    <h2 class="text-xl font-bold border-bottom">Let...</h2>
+                    <p>let variables are block-scoped! Specific scope = less mistakes.
+                        
+                        Even though i was assigned to 1 in the if block, that assignment was local to the block and therefore our “global” i was still 0. The if block’s scope was separate from the global scope.</p>
+                </div>
+
+                <div class="bg-gray-200 p-4 mt-6 rounded-lg">
+                    <h2 class="text-xl font-bold border-bottom">Const...</h2>
+                    <p>const restricts over-writing variables.
+
+
+                        const i = 0;i = 1; // TypeError: Assignment to constant variable.
+                        
+                        const doesn’t even let you declare a variable without assigning its (constant) value!
+                        
+                        const i; // SyntaxError: Missing initializer in const declaration
+                        
+                        const, like let, is block scoped.
+                        
+                        const does allow variable mutation (only objects/arrays are mutable in JS).</p>
+                </div>
+            </div>
+
+            <div class="w-3/5 mx-auto">
+                <h1 class="text-2xl font-bold">2. Tell us the use cases of null and undefined</h1>
+                <div class="bg-gray-200 p-4 mt-6 rounded-lg">
+                    <h2 class="text-xl font-bold border-bottom">Undefined...</h2>
+                    <p>undefined is a global variable that JavaScript creates at run time. JavaScript assigns undefined to any variable that has been declared but not initialized or defined. In other words, in a case where no value has been explicitly assigned to the variable, JavaScript calls it undefined.</p>
+                </div>
+                <div class="bg-gray-200 p-4 mt-6 rounded-lg">
+                    <h2 class="text-xl font-bold border-bottom">Null...</h2>
+                    <p>It is one of JavaScript’s primitive values and is treated as falsy for boolean operations.null is an empty or non-existent value and null must be assigned. We use null when we want to explicitly declare that a variable is empty.</p>
+                </div>
+            </div>
+
+            <div class="w-3/5 mx-auto mt-6">
+                <h1 class="text-2xl font-bold">3. What do you mean by REST API?</h1>
+                <div class="bg-gray-200 p-4 mt-2 rounded-lg">
+                    <p>APIs are changing the way companies design, build, and implement software applications.
+                        Monolithic architecture has given way to solutions based on loosely coupled microservices. Developers can focus on core functionalities while using different types of APIs to access and incorporate functions and features created by other specialists.
+                        REST has quickly become one of the most popular architectural styles for creating web-based apps and services.
+                        Find out how REST APIs work and use them to develop innovative business and customer-facing solutions.</p>
+                </div>
+            </div>
+        </main>
+    </body>
+
+</html>
